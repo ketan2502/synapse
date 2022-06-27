@@ -1,0 +1,17 @@
+{
+	"name": "Creating CustomerRecords tbl",
+	"properties": {
+		"content": {
+			"query": "CREATE TABLE CustomerRecords \n\n(CUSTOMERID INT,\n  CUSTOMERNAME NATIONAL CHARACTER VARYING(100),\n   CREDITLIMIT INT\n)\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "synapsesql",
+				"poolName": "synapsesql"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
