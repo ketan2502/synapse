@@ -170,7 +170,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "2c222dfc-5b55-465b-94d0-db7d872d2fe7"
+						"spark.autotune.trackingId": "c26c0c9d-5f1a-4470-b9ce-7c6ad1daa895"
 					}
 				},
 				"metadata": {
@@ -285,7 +285,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "30fd0434-ec29-43b4-8147-a365f3614525"
+						"spark.autotune.trackingId": "1448d7b6-0faf-43a3-b771-0ca22bc0af6f"
 					}
 				},
 				"metadata": {
@@ -351,6 +351,39 @@
 						"execution_count": null
 					}
 				]
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/smalltripsspark')]",
+			"type": "Microsoft.Synapse/workspaces/sqlscripts",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"content": {
+					"query": "Select * from smalltripsspark",
+					"metadata": {
+						"language": "sql"
+					},
+					"currentConnection": {
+						"databaseName": "default",
+						"poolName": "Built-in"
+					},
+					"resultLimit": 5000
+				},
+				"type": "SqlQuery"
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/SQL script 1')]",
+			"type": "Microsoft.Synapse/workspaces/sqlscripts",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"content": {
+					"metadata": {
+						"language": "sql"
+					}
+				}
 			},
 			"dependsOn": []
 		}
