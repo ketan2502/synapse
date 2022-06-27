@@ -1,0 +1,17 @@
+{
+	"name": "smalltripsspark",
+	"properties": {
+		"content": {
+			"query": "Select * from smalltripsspark",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "default",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
